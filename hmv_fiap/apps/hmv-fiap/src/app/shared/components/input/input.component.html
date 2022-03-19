@@ -1,0 +1,26 @@
+<mat-form-field
+	[appearance]="appearance"
+	[formGroup]="parentFormGroup.form"
+	class="input-container"
+	(focusin)="onFocusIn($event)"
+	(focusout)="onFocusOut($event)"
+>
+	<mat-label *ngIf="labelName">{{ labelName }}</mat-label>
+	<input
+		[formControl]="$any(ngControl.control)"
+		matInput
+		[placeholder]="placeholder"
+		[required]="required"
+		[type]="type"
+	/>
+	<ng-content></ng-content>
+	<mat-hint>{{ hint }}</mat-hint>
+	<mat-error
+		class="form-text text-danger"
+		*ngFor="
+			let errorMessage of $any(parentFormGroup.form.controls)[$any(ngControl.name)]['errorMessages']
+		"
+	>
+		{{ errorMessage }}<br />
+	</mat-error>
+</mat-form-field>

@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputComponent Shows right icon 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  fb={[Function FormBuilder]}
+  formExample={[Function FormGroup]}
+  title={[Function String]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <hmv-input
+      class="ng-untouched ng-pristine ng-valid"
+      formcontrolname="name"
+      id="input-2"
+      placeholder="fullname"
+    >
+      <mat-form-field
+        appearance="outline"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+      >
+        <div
+          class="mat-form-field-wrapper"
+        >
+          <div
+            class="mat-form-field-flex"
+          >
+            <div
+              class="mat-form-field-outline"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-outline mat-form-field-outline-thick"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-infix"
+            >
+              <input
+                aria-describedby="mat-hint-2"
+                aria-invalid="false"
+                aria-required="false"
+                class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                data-placeholder="fullname"
+                matinput=""
+              />
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate my-icon material-icons mat-icon-no-color"
+                data-mat-icon-type="font"
+                matprefix=""
+                role="img"
+              >
+                person
+              </mat-icon>
+              <span
+                class="mat-form-field-label-wrapper"
+              >
+                <label
+                  class="mat-form-field-label mat-empty mat-form-field-empty"
+                >
+                  <mat-label>
+                  </mat-label>
+                </label>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mat-form-field-subscript-wrapper"
+          >
+            <div
+              class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+              style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+            >
+              <mat-hint
+                class="mat-hint"
+              >
+              </mat-hint>
+              <div
+                class="mat-form-field-hint-spacer"
+              />
+            </div>
+          </div>
+        </div>
+      </mat-form-field>
+    </hmv-input>
+  </form>
+</ng-component>
+`;
+
+exports[`InputComponent should display placeholder 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  fb={[Function FormBuilder]}
+  formExample={[Function FormGroup]}
+  title={[Function String]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <hmv-input
+      class="ng-untouched ng-pristine ng-valid"
+      formcontrolname="name"
+      id="input-1"
+      placeholder="fullname"
+    >
+      <mat-form-field
+        appearance="outline"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+      >
+        <div
+          class="mat-form-field-wrapper"
+        >
+          <div
+            class="mat-form-field-flex"
+          >
+            <div
+              class="mat-form-field-outline"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-outline mat-form-field-outline-thick"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-infix"
+            >
+              <input
+                aria-describedby="mat-hint-1"
+                aria-invalid="false"
+                aria-required="false"
+                class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                data-placeholder="fullname"
+                matinput=""
+              />
+              <span
+                class="mat-form-field-label-wrapper"
+              >
+                <label
+                  class="mat-form-field-label mat-empty mat-form-field-empty"
+                >
+                  <mat-label>
+                  </mat-label>
+                </label>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mat-form-field-subscript-wrapper"
+          >
+            <div
+              class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+              style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+            >
+              <mat-hint
+                class="mat-hint"
+              >
+              </mat-hint>
+              <div
+                class="mat-form-field-hint-spacer"
+              />
+            </div>
+          </div>
+        </div>
+      </mat-form-field>
+    </hmv-input>
+  </form>
+</ng-component>
+`;
+
+exports[`InputComponent should display the host component input 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  fb={[Function FormBuilder]}
+  formExample={[Function FormGroup]}
+  title={[Function String]}
+>
+  <form
+    class="ng-untouched ng-dirty ng-invalid"
+    novalidate=""
+  >
+    <hmv-input
+      class="ng-untouched floating ng-dirty ng-invalid"
+      formcontrolname="name"
+      id="input-0"
+    >
+      <mat-form-field
+        appearance="outline"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label ng-untouched _mat-animation-noopable mat-form-field-should-float mat-focused ng-dirty ng-invalid"
+      >
+        <div
+          class="mat-form-field-wrapper"
+        >
+          <div
+            class="mat-form-field-flex"
+          >
+            <div
+              class="mat-form-field-outline"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-outline mat-form-field-outline-thick"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-infix"
+            >
+              <input
+                aria-describedby="mat-hint-0"
+                aria-invalid="false"
+                aria-required="false"
+                class="mat-input-element mat-form-field-autofill-control ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"
+                data-placeholder=""
+                matinput=""
+              />
+              <span
+                class="mat-form-field-label-wrapper"
+              >
+                <label
+                  class="mat-form-field-label"
+                >
+                  <mat-label>
+                  </mat-label>
+                </label>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mat-form-field-subscript-wrapper"
+          >
+            <div
+              class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+              style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+            >
+              <mat-hint
+                class="mat-hint"
+              >
+              </mat-hint>
+              <div
+                class="mat-form-field-hint-spacer"
+              />
+            </div>
+          </div>
+        </div>
+      </mat-form-field>
+    </hmv-input>
+  </form>
+</ng-component>
+`;
+
+exports[`InputComponent shows hint text 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  fb={[Function FormBuilder]}
+  formExample={[Function FormGroup]}
+  title={[Function String]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <hmv-input
+      class="ng-untouched ng-pristine ng-valid"
+      formcontrolname="name"
+      hint="hint_text"
+      id="input-3"
+      placeholder="fullname"
+    >
+      <mat-form-field
+        appearance="outline"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+      >
+        <div
+          class="mat-form-field-wrapper"
+        >
+          <div
+            class="mat-form-field-flex"
+          >
+            <div
+              class="mat-form-field-outline"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-outline mat-form-field-outline-thick"
+            >
+              <div
+                class="mat-form-field-outline-start"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-gap"
+                style="width: 0px;"
+              />
+              <div
+                class="mat-form-field-outline-end"
+              />
+            </div>
+            <div
+              class="mat-form-field-infix"
+            >
+              <input
+                aria-describedby="mat-hint-3"
+                aria-invalid="false"
+                aria-required="false"
+                class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                data-placeholder="fullname"
+                matinput=""
+              />
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate my-icon material-icons mat-icon-no-color"
+                data-mat-icon-type="font"
+                matsuffix=""
+                role="img"
+              >
+                person
+              </mat-icon>
+              <span
+                class="mat-form-field-label-wrapper"
+              >
+                <label
+                  class="mat-form-field-label mat-empty mat-form-field-empty"
+                >
+                  <mat-label>
+                  </mat-label>
+                </label>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mat-form-field-subscript-wrapper"
+          >
+            <div
+              class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+              style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+            >
+              <mat-hint
+                class="mat-hint"
+              >
+                hint_text
+              </mat-hint>
+              <div
+                class="mat-form-field-hint-spacer"
+              />
+            </div>
+          </div>
+        </div>
+      </mat-form-field>
+    </hmv-input>
+  </form>
+</ng-component>
+`;

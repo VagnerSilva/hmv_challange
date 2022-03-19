@@ -1,0 +1,20 @@
+<section aria-describedby="paciente" class="card">
+  <h2 id="paciente" class="card-title">Dados do Paciente</h2>
+  <ul>
+    <li>
+      <label>Nome:</label> <span>{{ paciente.nomePaciente }}</span>
+    </li>
+    <li>
+      <label>Idade:</label> <span>{{ paciente.idade }}</span>
+    </li>
+    <li>
+      <label>Alergias:</label> <span>{{ paciente.alergia }}</span>
+    </li>
+    <li>
+      <label>Uso contínuo:</label> <span>{{ paciente.medicamentoUsoContinuo }}</span>
+    </li>
+    <li class="font-bold !text-primary-pure">
+      <label >Importante:</label> <span>{{ paciente.descricao }}</span>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use './sass/global/config/reset';
+@use './sass/global/config/normalize';
+@use './sass/global/config/tailwind';
+
+@use './sass/global/fonts';
+@use './sass/global/colors';
+@use './sass/global/typography';
+@use './sass/global/theme';
+
+@use './sass/material/field';
+
+// components
+@use './sass/components/card'
+

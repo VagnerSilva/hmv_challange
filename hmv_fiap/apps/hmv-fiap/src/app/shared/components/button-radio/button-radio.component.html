@@ -1,0 +1,30 @@
+<div
+	class="my-4"
+	[formGroup]="parentFormGroup.form"
+	class="input-container"
+	(focusin)="onFocusIn($event)"
+	(focusout)="onFocusOut($event)"
+>
+	<label>{{ labelName }}</label>
+	<mat-radio-group class="block" [formControl]="$any(ngControl.control)">
+		<mat-radio-button
+			*ngFor="let item of options"
+			class="font-bold uppercase radio-space"
+			[value]="item[keyValue] ? item[keyValue] : item"
+		>
+			{{ item[keyLabel] ? item[keyLabel] : item }}
+		</mat-radio-button>
+	</mat-radio-group>
+	<ng-container *ngIf="ngControl.control?.touched">
+		<mat-error
+			class="form-text text-danger"
+			*ngFor="
+				let errorMessage of $any(parentFormGroup.form.controls)[$any(ngControl.name)][
+					'errorMessages'
+				]
+			"
+		>
+			{{ errorMessage }}<br />
+		</mat-error>
+	</ng-container>
+</div>

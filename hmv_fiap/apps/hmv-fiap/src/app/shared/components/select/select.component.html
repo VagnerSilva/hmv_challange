@@ -1,0 +1,22 @@
+<mat-form-field appearance="fill"
+[formGroup]="parentFormGroup.form"
+class="input-container"
+(focusin)="onFocusIn($event)"
+(focusout)="onFocusOut($event)"
+>
+  <mat-label *ngIf="labelName">{{ labelName }}</mat-label>
+  <mat-select  [formControl]="$any(ngControl.control)" [required]="required">
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let item of items" [value]="item">
+      {{item?.value ? item.value : item}}
+    </mat-option>
+  </mat-select>
+
+  <mat-error class="form-text text-danger" *ngFor="let errorMessage of $any(parentFormGroup.form.controls)[$any(ngControl.name)]['errorMessages']">
+    {{errorMessage}}<br/>
+  </mat-error>
+
+</mat-form-field>
+
+
+

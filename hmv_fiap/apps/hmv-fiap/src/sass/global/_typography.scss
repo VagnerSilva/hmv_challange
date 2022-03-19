@@ -1,0 +1,95 @@
+@use 'sass:math';
+
+$fontSize: 14;
+$fontFamily: Helvetica, sans-serif;
+
+@function fontSize($size) {
+	$unit: 1rem;
+	$base: $fontSize;
+	$resutl: math.div($size, $base) * $unit;
+	@return $resutl;
+}
+
+@mixin fontResponsiveSize($mobile, $tablet, $desktop) {
+	font-size: fontSize($mobile);
+
+	@screen tbt {
+		font-size: fontSize($tablet);
+	}
+
+	@screen desk {
+		font-size: fontSize($desktop);
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-light);
+	font-size: $fontSize * 1px;
+	color: var(--gray-600);
+	font-family: $fontFamily;
+}
+
+h1 {
+	@include fontResponsiveSize(32, 40, 48);
+}
+
+h2 {
+	@include fontResponsiveSize(24, 32, 40);
+}
+
+h3 {
+	@include fontResponsiveSize(20, 28, 36);
+}
+
+h4 {
+	@include fontResponsiveSize(16, 24, 32);
+}
+
+h5 {
+	@include fontResponsiveSize(16, 20, 24);
+}
+
+h6 {
+	@include fontResponsiveSize(14, 16, 20);
+}
+
+p {
+	@include fontResponsiveSize(14, 14, 14);
+}
+
+button,
+button > span {
+	@include fontResponsiveSize(14, 14, 14);
+	font-weight: bold;
+}
+
+table {
+	@include fontResponsiveSize(12, 12, 12);
+}
+
+label {
+	@include fontResponsiveSize(12, 14, 16);
+}
+
+:ng-deep textarea {
+	@include fontResponsiveSize(10, 12, 14);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+table,
+textarea {
+	color: var(--gray-900);
+}

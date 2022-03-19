@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonRadioComponent should create 1`] = `
+<ng-component
+  __ngContext__={[Function LRootView]}
+  fb={[Function FormBuilder]}
+  formExample={[Function FormGroup]}
+  options={[Function Array]}
+  title={[Function String]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <hmv-button-radio
+      class="ng-untouched ng-pristine ng-valid"
+      formcontrolname="select"
+      id="input-0"
+      labelname="My Radio"
+    >
+      <div
+        class="input-container ng-untouched ng-pristine ng-valid"
+      >
+        <label>
+          My Radio
+        </label>
+        <mat-radio-group
+          class="mat-radio-group block ng-untouched ng-pristine ng-valid"
+          role="radiogroup"
+        >
+          <mat-radio-button
+            class="mat-radio-button font-bold uppercase radio-space _mat-animation-noopable mat-accent"
+          >
+            <label
+              class="mat-radio-label"
+              for="mat-radio-2-input"
+            >
+              <span
+                class="mat-radio-container"
+              >
+                <span
+                  class="mat-radio-outer-circle"
+                />
+                <span
+                  class="mat-radio-inner-circle"
+                />
+                <input
+                  class="mat-radio-input cdk-visually-hidden"
+                  id="mat-radio-2-input"
+                  name="mat-radio-group-0"
+                  tabindex="0"
+                  type="radio"
+                  value="Sim"
+                />
+                <span
+                  class="mat-ripple mat-radio-ripple mat-focus-indicator"
+                  mat-ripple=""
+                >
+                  <span
+                    class="mat-ripple-element mat-radio-persistent-ripple"
+                  />
+                </span>
+              </span>
+              <span
+                class="mat-radio-label-content"
+              >
+                <span
+                  style="display: none;"
+                >
+                </span>
+                 Sim 
+              </span>
+            </label>
+          </mat-radio-button>
+          <mat-radio-button
+            class="mat-radio-button font-bold uppercase radio-space _mat-animation-noopable mat-accent"
+          >
+            <label
+              class="mat-radio-label"
+              for="mat-radio-3-input"
+            >
+              <span
+                class="mat-radio-container"
+              >
+                <span
+                  class="mat-radio-outer-circle"
+                />
+                <span
+                  class="mat-radio-inner-circle"
+                />
+                <input
+                  class="mat-radio-input cdk-visually-hidden"
+                  id="mat-radio-3-input"
+                  name="mat-radio-group-0"
+                  tabindex="0"
+                  type="radio"
+                  value="Nao"
+                />
+                <span
+                  class="mat-ripple mat-radio-ripple mat-focus-indicator"
+                  mat-ripple=""
+                >
+                  <span
+                    class="mat-ripple-element mat-radio-persistent-ripple"
+                  />
+                </span>
+              </span>
+              <span
+                class="mat-radio-label-content"
+              >
+                <span
+                  style="display: none;"
+                >
+                </span>
+                 Nao 
+              </span>
+            </label>
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </hmv-button-radio>
+  </form>
+</ng-component>
+`;

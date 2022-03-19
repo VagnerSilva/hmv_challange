@@ -1,0 +1,34 @@
+{
+  "root": "apps/hmv-fiap-e2e",
+  "sourceRoot": "apps/hmv-fiap-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/hmv-fiap-e2e/cypress.json",
+        "devServerTarget": "hmv-fiap:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "hmv-fiap:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/hmv-fiap-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "hmv-fiap"
+  ]
+}

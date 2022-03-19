@@ -1,0 +1,14 @@
+.card {
+	height: 100%;
+	border: 1px solid var(--primary-pure);
+	border-radius: 8px;
+	padding: 0.75em;
+}
+
+.card-title {
+	@apply text-primary-pure font-bold text-lg;
+
+	@screen tbt {
+		@apply text-2xl;
+	}
+}

@@ -1,0 +1,63 @@
+<section class="hmv-container">
+	<div class="card mt-12 card-size">
+		<h2 class="card-title">Procedimentos Realizados</h2>
+		<form [formGroup]="pRealizadoForm" (ngSubmit)="onSubmit()">
+			<p class="mt-4">Sinais vitais alterados?</p>
+			<div class="flex flex-col checked">
+				<mat-checkbox formControlName="respiracao">Respiração</mat-checkbox>
+				<hmv-textarea
+					class="px-6"
+					appearance="fill"
+					placeholder="observação"
+					floatLabel="auto"
+					formControlName="respiracaoObservacao"
+				></hmv-textarea>
+			</div>
+			<div class="flex flex-col checked">
+				<mat-checkbox formControlName="pulso">Pulso</mat-checkbox>
+				<hmv-textarea
+					class="px-6"
+					appearance="fill"
+					placeholder="observação"
+					floatLabel="auto"
+					formControlName="pulsoObservacao"
+				></hmv-textarea>
+			</div>
+
+			<mat-checkbox class="!block mb-2" formControlName="pressaoArterialPA"
+				>Pressão arterial (PA)</mat-checkbox
+			>
+			<mat-checkbox class="!block mb-2" formControlName="temperatura">Temperatura</mat-checkbox>
+
+			<hmv-button-radio
+				labelName="Foi administrado algum medicamento durante o atendimento?"
+				formControlName="medicamentoMinistrado"
+				[options]="['Sim', 'Não']"
+			></hmv-button-radio>
+
+			<hmv-button-radio
+				class="block mt-4"
+				labelName="Paciente apresentou perda de consciêcia duante o atendimento?"
+				formControlName="pacienteComPerdaDeConciencia"
+				[options]="['Sim', 'Não']"
+			></hmv-button-radio>
+
+			<hmv-button-radio
+				class="block my-4"
+				labelName="Reanimação Cardiopulmonar (RCP) realizada durante o atendimento?"
+				formControlName="procedimentoCardiopulmonar"
+				[options]="['Sim', 'Não']"
+			></hmv-button-radio>
+
+			<hmv-textarea
+				placeholder="observações"
+				appearance="outline"
+				rows="4"
+				floatLabel="auto"
+				formControlName="observacoes"
+			></hmv-textarea>
+
+			<hmv-button>Enviar</hmv-button>
+		</form>
+	</div>
+</section>

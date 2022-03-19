@@ -1,0 +1,36 @@
+:host {
+	display: block;
+}
+
+.dados-paciente {
+	background-color: blue;
+	border: 1px solid var(--primary-pure);
+	border-radius: 8px;
+	padding: 16px;
+	width: 1200px;
+}
+
+li {
+	@apply text-gray-500;
+	padding-left: 18px;
+
+	label {
+		margin-right: 8px;
+	}
+}
+
+.info {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hmv-dados-paciente,
+hmv-hospital-destino {
+	max-width: 440px;
+	min-width: 275px;
+	width: 100%;
+	display: block;
+	margin-top: 1rem;
+}

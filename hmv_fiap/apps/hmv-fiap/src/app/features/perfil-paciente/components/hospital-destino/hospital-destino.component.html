@@ -1,0 +1,10 @@
+<section aria-describedby="hospital" class="card">
+  <h2 id="hospital" class="card-title">Hospital de Destino</h2>
+  <p>Preencha esta informação caso precise entra em contato com o hospital de destiono</p>
+  <form  [formGroup]="hospitalForm" (ngSubmit)="onSubmit()">
+    <hmv-select formControlName="hospital" [items]="listaHospital"></hmv-select>
+    <hmv-button [disabled]="hospitalForm.invalid">ENTRA EM CONTATO COM HOSPITAL</hmv-button>
+  </form>
+
+</section>
+

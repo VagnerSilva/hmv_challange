@@ -1,0 +1,12 @@
+:host {
+	display: block;
+}
+
+li {
+	@apply text-gray-500;
+	padding-left: 18px;
+
+	label {
+		margin-right: 8px;
+	}
+}

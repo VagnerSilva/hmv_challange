@@ -1,0 +1,14 @@
+{
+  "$schemas": "https://ngrefs.com/cli/angular-json",
+  "version": 2,
+  "projects": {
+    "hmv-fiap": "apps/hmv-fiap",
+    "hmv-fiap-e2e": "apps/hmv-fiap-e2e"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "displayBlock": true
+    }
+  }
+}

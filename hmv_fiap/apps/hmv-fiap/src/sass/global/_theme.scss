@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./typography" as typography;
+
+$theme-typography: mat.define-typography-config(
+	$font-family: typography.$fontFamily,
+);
+
+// Light Theme Text
+$dark-text: #141418;
+$dark-primary-text: rgba($dark-text, 0.87);
+$dark-accent-text: rgba($dark-primary-text, 0.54);
+$dark-disabled-text: rgba($dark-primary-text, 0.38);
+$dark-dividers: rgba($dark-primary-text, 0.12);
+$dark-focused: rgba($dark-primary-text, 0.12);
+
+// Dark Theme text
+$light-text: #ffffff;
+$light-primary-text: $light-text;
+$light-accent-text: rgba($light-primary-text, 0.7);
+$light-disabled-text: rgba($light-primary-text, 0.5);
+$light-dividers: rgba($light-primary-text, 0.12);
+$light-focused: rgba($light-primary-text, 0.12);
+
+$primary-palette: (
+	main: var(--primary-pure),
+	lighter: var(--primary-lighter),
+	darker: var(--primary-dark),
+	200: var(--primary-pure),
+	// For slide toggle,
+	contrast:
+		(
+			main: $light-primary-text,
+			lighter: $dark-primary-text,
+			darker: $light-primary-text,
+		),
+);
+
+$theme-primary: mat.define-palette($primary-palette, main, lighter, darker);
+$theme-accent: mat.define-palette($primary-palette, main, lighter, darker);
+
+$hmv-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $theme-primary,
+			accent: $theme-accent,
+		),
+		typography: $theme-typography,
+	)
+);
+
+@include mat.all-component-themes($hmv-theme);

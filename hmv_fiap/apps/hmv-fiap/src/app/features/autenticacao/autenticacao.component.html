@@ -1,0 +1,10 @@
+<form *ngIf="!show" class="grid justify-center pt-20" [formGroup]="authForm" (ngSubmit)="onSubmit()">
+	<h1 class="text-primary-pure bold pb-12">Autenticar Usuário</h1>
+	<hmv-input labelName="ID de Usuário" type="number" formControlName="idSocorrista"></hmv-input>
+	<hmv-button class="mt-4">Autenticar</hmv-button>
+</form>
+
+<div class="content-status" *ngIf="show">
+	<mat-icon class="mat-18 !text-[280px] text-primary-pure">check_circle_outline</mat-icon>
+	<h1 class="uppercase text-primary-pure text-lg bold w-full">Registrado com Sucesso</h1>
+</div>
