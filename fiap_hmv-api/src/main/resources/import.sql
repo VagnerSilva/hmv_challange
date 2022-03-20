@@ -1,0 +1,2 @@
+INSERT INTO public.tb_paciente(user_id, created_at, updated_at, alergia, descricao, idade, medicamento_uso_continuo, nome_paciente) VALUES (159263487, now(), now(), 'Dipirona',  'Hipertenso', 23,  'Flouxeina', 'Gabriele Guedes');
+INSERT INTO public.tb_socorrista(id, created_at, updated_at, ativo, idade, nome_completo) VALUES (123456, now(), now(), true, 55, 'Marcos Pontes');

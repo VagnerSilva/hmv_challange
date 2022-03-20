@@ -8,14 +8,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -29,12 +29,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 public class PacienteControllerTest {
     @Autowired
     MockMvc mockMvc;
-
-
-
-
-    @InjectMocks
-    PacienteController pacienteController;
 
 
     @MockBean
@@ -63,7 +57,8 @@ public class PacienteControllerTest {
         Mockito.when(pacienteService.findById(44)).thenReturn(paciente);
 
         mockMvc.perform(MockMvcRequestBuilders
-                .get("paciente/44"))
+                .get("/paciente/{userId}", 44))
+                .andExpect(jsonPath("$.userId").value(44))
                 .andExpect(status().isOk());
     }
 

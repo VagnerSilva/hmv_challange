@@ -23,7 +23,7 @@ public class Paciente extends BaseEntity {
             parameters = {
                     @Parameter(name = "sequence_name", value = "hibernate_sequence"),
                     @Parameter(name = "startID", value = "159263487"),
-                    @Parameter(name = "nameID", value = "userId"),
+                    @Parameter(name = "nameID", value = "user_id"),
                     @Parameter(name = "tableName", value = "tb_paciente")
             }
     )
