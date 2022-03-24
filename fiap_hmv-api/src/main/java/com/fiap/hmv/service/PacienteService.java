@@ -27,13 +27,13 @@ public class PacienteService {
         return repository.save(paciente);
     }
 
-    public void update(final Integer id, final String alergia,
+    public Paciente update(final Integer id, final String alergia,
                        final String medicamentoUsoContinuo, final String descricao) {
        var pacienteRepository = findById(id);
             pacienteRepository.setAlergia(alergia);
             pacienteRepository.setMedicamentoUsoContinuo(medicamentoUsoContinuo);
             pacienteRepository.setDescricao(descricao);
-            repository.save(pacienteRepository);
+            return repository.save(pacienteRepository);
     }
 
     public void deleteById(Integer id) {

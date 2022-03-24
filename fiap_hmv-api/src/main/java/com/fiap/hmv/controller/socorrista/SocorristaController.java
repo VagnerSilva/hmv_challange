@@ -25,7 +25,7 @@ public class SocorristaController {
         try {
             var socorrista = socorristaService.findById(userId);
             return ResponseEntity.ok().body(socorrista.toResponse());
-        } catch (ApiErrorException e) {
+        } catch (ApiErrorException | NullPointerException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).header(e.getMessage()).build();
         }

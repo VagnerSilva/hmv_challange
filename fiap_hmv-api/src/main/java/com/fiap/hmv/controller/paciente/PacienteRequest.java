@@ -1,12 +1,16 @@
 package com.fiap.hmv.controller.paciente;
 
 import com.fiap.hmv.repository.entity.Paciente;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class PacienteRequest {
     private String nomePaciente;
     private Integer idade;

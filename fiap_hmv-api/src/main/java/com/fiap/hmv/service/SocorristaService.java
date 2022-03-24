@@ -3,7 +3,6 @@ package com.fiap.hmv.service;
 import com.fiap.hmv.controller.socorrista.SocorristaRequest;
 import com.fiap.hmv.repository.SocorristaRepository;
 import com.fiap.hmv.repository.entity.Socorrista;
-import com.fiap.hmv.repository.mapper.SocorristaMapper;
 import com.fiap.hmv.service.exception.ApiErrorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -30,8 +29,10 @@ public class SocorristaService {
     }
 
     public Socorrista update(Integer id, SocorristaRequest socorrista) {
-        var socorristaRepository = findById(id);
-        var updateSocorrista = SocorristaMapper.INSTANCE.toSocorrista(socorrista);
+        var updateSocorrista = findById(id);
+        updateSocorrista.setIdade(socorrista.getIdade());
+        updateSocorrista.setAtivo(socorrista.getAtivo());
+        updateSocorrista.setNomeCompleto(socorrista.getNomeCompleto());
         return repository.save(updateSocorrista);
     }
 

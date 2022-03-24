@@ -3,11 +3,15 @@ package com.fiap.hmv.controller.procedimentosRealizados;
 
 import com.fiap.hmv.repository.entity.Paciente;
 import com.fiap.hmv.repository.entity.ProcedimentosRealizados;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProcedimentosRealizadosRequest {
     private Integer idSocorrista;
 

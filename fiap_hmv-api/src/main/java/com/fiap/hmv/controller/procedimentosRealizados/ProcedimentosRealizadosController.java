@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/procedimentos")
 public class ProcedimentosRealizadosController {
-    private final ProcedimentosRealizadosService pr;
-    private final SocorristaService socorristaService;
+    ProcedimentosRealizadosService pr;
+    SocorristaService socorristaService;
 
 
     public ProcedimentosRealizadosController(ProcedimentosRealizadosService service, SocorristaService s) {
@@ -20,18 +20,20 @@ public class ProcedimentosRealizadosController {
         socorristaService = s;
     }
 
-    @ApiOperation(value = "Relato do procedimento")
+    @ApiOperation(value = "Relate do procedimento")
     @PostMapping("/cadastro")
-    public ResponseEntity<Boolean> createPR(
+    public ResponseEntity<Boolean> CadastrarPR(
             @RequestBody ProcedimentosRealizadosRequest newPR) {
         try {
 
             var socorrista =  socorristaService.findById(newPR.getIdSocorrista());
-            if(socorrista.getId() == newPR.getIdSocorrista() && socorrista.getAtivo()) {
+            var hasId = socorrista.getId().intValue() == newPR.getIdSocorrista().intValue();
+            var isActive = socorrista.getAtivo();
+            if(hasId && socorrista.getAtivo()) {
                 pr.save(newPR.toEntity());
                 return ResponseEntity.ok().body(true);
             }
-            return ResponseEntity.ok().body(false);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(false);
         } catch (ApiErrorException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).header(e.getMessage()).build();

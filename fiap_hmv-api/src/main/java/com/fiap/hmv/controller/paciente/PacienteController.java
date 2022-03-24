@@ -25,7 +25,7 @@ public class PacienteController {
         try {
             var newPaciente = pacienteService.findById(userId);
             return ResponseEntity.ok().body(newPaciente.toResponse());
-        } catch (ApiErrorException e) {
+        } catch (ApiErrorException | NullPointerException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).header(e.getMessage()).build();
         }
@@ -33,12 +33,12 @@ public class PacienteController {
 
     @ApiOperation(value = "Cadastro de paciente")
     @PostMapping("cadastro")
-    public ResponseEntity<Paciente> register(
+    public ResponseEntity<Paciente> cadastrar(
             @RequestBody PacienteRequest paciente) {
         try {
             var newPaciente = pacienteService.save(paciente.toEntity());
             return ResponseEntity.ok().body(newPaciente.toResponse());
-        } catch (ApiErrorException e) {
+        } catch (ApiErrorException | NullPointerException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).header(e.getMessage()).build();
         }

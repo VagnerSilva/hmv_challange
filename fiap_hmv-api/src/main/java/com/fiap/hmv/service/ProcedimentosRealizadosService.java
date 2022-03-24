@@ -12,7 +12,7 @@ import java.util.Optional;
 public class ProcedimentosRealizadosService {
 
 
-    private ProcedimentosRealizadosRepository repository;
+    ProcedimentosRealizadosRepository repository;
 
     public ProcedimentosRealizadosService(ProcedimentosRealizadosRepository repo) {
         repository = repo;
