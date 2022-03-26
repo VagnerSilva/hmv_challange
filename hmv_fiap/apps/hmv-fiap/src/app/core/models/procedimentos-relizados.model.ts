@@ -55,12 +55,12 @@ export class ProcedimentoRealizadoModel {
 
 export interface ProcedimentoRealizadosRequest {
 	idSocorrista: number
-	medicamentoMinistrado: boolean
+	medicamentoMinistrado: string
 	observacoes: string
 	paciente: PacienteModel
-	pacienteComPerdaDeConciencia: boolean
+	pacienteComPerdaDeConciencia: string
 	pressaoArterialPA: boolean
-	procedimentoCardiopulmonar: boolean
+	procedimentoCardiopulmonar: string
 	pulso: boolean
 	pulsoObservacao: string
 	respiracao: boolean

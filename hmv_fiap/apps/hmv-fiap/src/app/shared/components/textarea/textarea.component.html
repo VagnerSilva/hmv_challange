@@ -6,8 +6,8 @@ class="input-container"
 (focusout)="onFocusOut($event)"
 >
   <mat-label *ngIf="labelName">{{ labelName }}</mat-label>
-  <textarea   [formControl]="$any(ngControl.control)" matInput
-    [rows]="rows"
+  <textarea [formControl]="$any(ngControl.control)" matInput
+    [attr.rows]="rows"
     [value]="value"
     [placeholder]="placeholder"
     [required]="required"

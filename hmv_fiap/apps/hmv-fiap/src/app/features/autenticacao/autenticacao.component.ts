@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, HostListener, OnInit } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 import { NavigationEnd, Router } from '@angular/router'
@@ -6,7 +7,6 @@ import { ProcedimentosRealizadosService } from '@core/services/api/procedimentos
 import { RxFormBuilder, RxwebValidators } from '@rxweb/reactive-form-validators'
 import { ToastrService } from 'ngx-toastr'
 import { DataService } from '../../core/services/data.service'
-
 @Component({
 	selector: 'hmv-autenticacao',
 	templateUrl: './autenticacao.component.html',
@@ -33,7 +33,7 @@ export class AutenticacaoComponent implements OnInit {
 
 	private disableBackButton(): void {
 		window.history.pushState(null, '', null)
-		this._router.events.subscribe((event) => {
+		this._router.events.subscribe((event: any) => {
 			if (event instanceof NavigationEnd && this.show) {
 				window.history.pushState(null, '', null)
 			}
@@ -67,9 +67,9 @@ export class AutenticacaoComponent implements OnInit {
 		this.procedimento = this._data.storage as ProcedimentoRealizadosRequest
 		this._procedimentoSrv.cadastro(this.procedimento).subscribe({
 			next: (status) => {
-				status ? (this.show = true) : this._toastr.error('Usuário inativo', 'Erro ao cadastrar')
+				status ? (this.show = true) : this._toastr.error('Socorrista inativo', 'Erro ao cadastrar')
 			},
-			error: () => this._toastr.error('Usuário não encontrado', 'Erro ao cadastrar'),
+			error: () => this._toastr.error('Socorrista não encontrado', 'Erro ao cadastrar'),
 		})
 	}
 }

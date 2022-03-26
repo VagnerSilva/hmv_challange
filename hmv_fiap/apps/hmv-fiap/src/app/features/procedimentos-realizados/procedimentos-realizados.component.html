@@ -30,20 +30,21 @@
 			<mat-checkbox class="!block mb-2" formControlName="temperatura">Temperatura</mat-checkbox>
 
 			<hmv-button-radio
+      class="medicamentoMinistrado"
 				labelName="Foi administrado algum medicamento durante o atendimento?"
 				formControlName="medicamentoMinistrado"
 				[options]="['Sim', 'Não']"
 			></hmv-button-radio>
 
 			<hmv-button-radio
-				class="block mt-4"
+				class="block mt-4 pacienteComPerdaDeConciencia"
 				labelName="Paciente apresentou perda de consciêcia duante o atendimento?"
 				formControlName="pacienteComPerdaDeConciencia"
 				[options]="['Sim', 'Não']"
 			></hmv-button-radio>
 
 			<hmv-button-radio
-				class="block my-4"
+				class="block my-4 procedimentoCardiopulmonar"
 				labelName="Reanimação Cardiopulmonar (RCP) realizada durante o atendimento?"
 				formControlName="procedimentoCardiopulmonar"
 				[options]="['Sim', 'Não']"

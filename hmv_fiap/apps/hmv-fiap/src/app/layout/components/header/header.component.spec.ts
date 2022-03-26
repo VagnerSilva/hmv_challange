@@ -1,4 +1,5 @@
 import { byAltText, byText, createComponentFactory, Spectator } from '@ngneat/spectator/jest'
+import { SharedModule } from '@shared/shared.module'
 import { HeaderComponent } from './header.component'
 
 const cases = {
@@ -8,7 +9,10 @@ const cases = {
 
 describe('HeaderComponent', () => {
 	let spectator: Spectator<HeaderComponent>
-	const createComponent = createComponentFactory(HeaderComponent)
+	const createComponent = createComponentFactory({
+		component: HeaderComponent,
+		imports: [SharedModule],
+	})
 
 	beforeEach(() => (spectator = createComponent()))
 

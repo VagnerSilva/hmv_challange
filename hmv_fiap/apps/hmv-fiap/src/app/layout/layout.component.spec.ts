@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { createHostFactory, SpectatorHost } from '@ngneat/spectator/jest'
+import { SharedModule } from '@shared/shared.module'
 import { LayoutComponent } from './layout.component'
 
 const cases = {
@@ -19,8 +20,10 @@ class CustomHostComponent {
 describe('LayoutComponent', () => {
 	let host: SpectatorHost<LayoutComponent, CustomHostComponent>
 	const createHost = createHostFactory({
+		imports: [SharedModule],
 		component: LayoutComponent,
 		host: CustomHostComponent,
+		schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	})
 
 	it('Snapshot successfully', () => {

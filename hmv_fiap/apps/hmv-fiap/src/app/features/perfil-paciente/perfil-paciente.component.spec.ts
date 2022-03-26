@@ -1,25 +1,56 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import { FormBuilder } from '@angular/forms'
+import { ActivatedRoute, Router } from '@angular/router'
+import { ProcedimentosRealizadosService } from '@core/services/api/procedimentos-realizados.service'
+import { DataService } from '@core/services/data.service'
+import { createComponentFactory, Spectator } from '@ngneat/spectator/jest'
+import { RxFormBuilder } from '@rxweb/reactive-form-validators'
+import { SharedModule } from '@shared/shared.module'
+import { ToastrService } from 'ngx-toastr'
+import { PerfilPacienteComponent } from './perfil-paciente.component'
 
-import { PerfilPacienteComponent } from './perfil-paciente.component';
+const paciente = {
+	nomePaciente: 'nome',
+	userId: 123456,
+}
 
 describe('PerfilPacienteComponent', () => {
-  let component: PerfilPacienteComponent;
-  let fixture: ComponentFixture<PerfilPacienteComponent>;
+	let comp: Spectator<PerfilPacienteComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PerfilPacienteComponent ]
-    })
-    .compileComponents();
-  });
+	const componentCreator = createComponentFactory({
+		component: PerfilPacienteComponent,
+		imports: [SharedModule],
+		schemas: [CUSTOM_ELEMENTS_SCHEMA],
+		componentViewProvidersMocks: [
+			DataService,
+			ProcedimentosRealizadosService,
+			ToastrService,
+			Router,
+		],
+		providers: [
+			{ provide: RxFormBuilder, useValue: new FormBuilder() },
+			{
+				provide: ActivatedRoute,
+				useValue: {
+					snapshot: {
+						data: {
+							paciente,
+						},
+					},
+				},
+			},
+			{ provide: DataService, useValue: { storage: {} } },
+		],
+		shallow: false,
+	})
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PerfilPacienteComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	it('Deve criar componente', () => {
+		comp = componentCreator()
+		expect(comp.fixture.componentInstance).toBeTruthy()
+	})
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it('Deve carrega perfil" ', async () => {
+		comp = componentCreator()
+		expect(comp.component.paciente).toBe(paciente)
+	})
+})

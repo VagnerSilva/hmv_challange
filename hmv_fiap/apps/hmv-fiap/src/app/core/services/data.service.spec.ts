@@ -1,9 +1,9 @@
-import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest'
+import { createHttpFactory, SpectatorHttp } from '@ngneat/spectator/jest'
 import { DataService } from './data.service'
 
 describe('DataService', () => {
-	let spectator: SpectatorService<DataService>
-	const createService = createServiceFactory(DataService)
+	let spectator: SpectatorHttp<DataService>
+	const createService = createHttpFactory(DataService)
 
 	beforeEach(() => (spectator = createService()))
 

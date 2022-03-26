@@ -18,8 +18,7 @@ exports[`InputComponent Shows right icon 1`] = `
       placeholder="fullname"
     >
       <mat-form-field
-        appearance="outline"
-        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
       >
         <div
           class="mat-form-field-wrapper"
@@ -27,36 +26,6 @@ exports[`InputComponent Shows right icon 1`] = `
           <div
             class="mat-form-field-flex"
           >
-            <div
-              class="mat-form-field-outline"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
-            <div
-              class="mat-form-field-outline mat-form-field-outline-thick"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
             <div
               class="mat-form-field-infix"
             >
@@ -67,6 +36,7 @@ exports[`InputComponent Shows right icon 1`] = `
                 class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
                 data-placeholder="fullname"
                 matinput=""
+                type="text"
               />
               <mat-icon
                 aria-hidden="true"
@@ -83,11 +53,19 @@ exports[`InputComponent Shows right icon 1`] = `
                 <label
                   class="mat-form-field-label mat-empty mat-form-field-empty"
                 >
-                  <mat-label>
-                  </mat-label>
+                  <span>
+                    fullname
+                  </span>
                 </label>
               </span>
             </div>
+          </div>
+          <div
+            class="mat-form-field-underline"
+          >
+            <span
+              class="mat-form-field-ripple"
+            />
           </div>
           <div
             class="mat-form-field-subscript-wrapper"
@@ -130,8 +108,7 @@ exports[`InputComponent should display placeholder 1`] = `
       placeholder="fullname"
     >
       <mat-form-field
-        appearance="outline"
-        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
       >
         <div
           class="mat-form-field-wrapper"
@@ -139,36 +116,6 @@ exports[`InputComponent should display placeholder 1`] = `
           <div
             class="mat-form-field-flex"
           >
-            <div
-              class="mat-form-field-outline"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
-            <div
-              class="mat-form-field-outline mat-form-field-outline-thick"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
             <div
               class="mat-form-field-infix"
             >
@@ -179,6 +126,7 @@ exports[`InputComponent should display placeholder 1`] = `
                 class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
                 data-placeholder="fullname"
                 matinput=""
+                type="text"
               />
               <span
                 class="mat-form-field-label-wrapper"
@@ -186,11 +134,19 @@ exports[`InputComponent should display placeholder 1`] = `
                 <label
                   class="mat-form-field-label mat-empty mat-form-field-empty"
                 >
-                  <mat-label>
-                  </mat-label>
+                  <span>
+                    fullname
+                  </span>
                 </label>
               </span>
             </div>
+          </div>
+          <div
+            class="mat-form-field-underline"
+          >
+            <span
+              class="mat-form-field-ripple"
+            />
           </div>
           <div
             class="mat-form-field-subscript-wrapper"
@@ -232,8 +188,7 @@ exports[`InputComponent should display the host component input 1`] = `
       id="input-0"
     >
       <mat-form-field
-        appearance="outline"
-        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label ng-untouched _mat-animation-noopable mat-form-field-should-float mat-focused ng-dirty ng-invalid"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-untouched _mat-animation-noopable mat-form-field-should-float mat-focused ng-dirty ng-invalid"
       >
         <div
           class="mat-form-field-wrapper"
@@ -241,36 +196,6 @@ exports[`InputComponent should display the host component input 1`] = `
           <div
             class="mat-form-field-flex"
           >
-            <div
-              class="mat-form-field-outline"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
-            <div
-              class="mat-form-field-outline mat-form-field-outline-thick"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
             <div
               class="mat-form-field-infix"
             >
@@ -281,18 +206,20 @@ exports[`InputComponent should display the host component input 1`] = `
                 class="mat-input-element mat-form-field-autofill-control ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"
                 data-placeholder=""
                 matinput=""
+                type="text"
               />
               <span
                 class="mat-form-field-label-wrapper"
               >
-                <label
-                  class="mat-form-field-label"
-                >
-                  <mat-label>
-                  </mat-label>
-                </label>
               </span>
             </div>
+          </div>
+          <div
+            class="mat-form-field-underline"
+          >
+            <span
+              class="mat-form-field-ripple"
+            />
           </div>
           <div
             class="mat-form-field-subscript-wrapper"
@@ -336,8 +263,7 @@ exports[`InputComponent shows hint text 1`] = `
       placeholder="fullname"
     >
       <mat-form-field
-        appearance="outline"
-        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
+        class="mat-form-field input-container mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid _mat-animation-noopable"
       >
         <div
           class="mat-form-field-wrapper"
@@ -345,36 +271,6 @@ exports[`InputComponent shows hint text 1`] = `
           <div
             class="mat-form-field-flex"
           >
-            <div
-              class="mat-form-field-outline"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
-            <div
-              class="mat-form-field-outline mat-form-field-outline-thick"
-            >
-              <div
-                class="mat-form-field-outline-start"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-gap"
-                style="width: 0px;"
-              />
-              <div
-                class="mat-form-field-outline-end"
-              />
-            </div>
             <div
               class="mat-form-field-infix"
             >
@@ -385,6 +281,7 @@ exports[`InputComponent shows hint text 1`] = `
                 class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
                 data-placeholder="fullname"
                 matinput=""
+                type="text"
               />
               <mat-icon
                 aria-hidden="true"
@@ -401,11 +298,19 @@ exports[`InputComponent shows hint text 1`] = `
                 <label
                   class="mat-form-field-label mat-empty mat-form-field-empty"
                 >
-                  <mat-label>
-                  </mat-label>
+                  <span>
+                    fullname
+                  </span>
                 </label>
               </span>
             </div>
+          </div>
+          <div
+            class="mat-form-field-underline"
+          >
+            <span
+              class="mat-form-field-ripple"
+            />
           </div>
           <div
             class="mat-form-field-subscript-wrapper"

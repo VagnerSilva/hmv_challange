@@ -18,7 +18,6 @@ export class ProcedimentosRealizadosComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.loadForm()
-		console.log(this._data.storage)
 	}
 
 	loadForm(): void {

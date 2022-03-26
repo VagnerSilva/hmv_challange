@@ -45,7 +45,7 @@ exports[`ButtonRadioComponent should create 1`] = `
                   class="mat-radio-inner-circle"
                 />
                 <input
-                  class="mat-radio-input cdk-visually-hidden"
+                  class="mat-radio-input"
                   id="mat-radio-2-input"
                   name="mat-radio-group-0"
                   tabindex="0"
@@ -89,7 +89,7 @@ exports[`ButtonRadioComponent should create 1`] = `
                   class="mat-radio-inner-circle"
                 />
                 <input
-                  class="mat-radio-input cdk-visually-hidden"
+                  class="mat-radio-input"
                   id="mat-radio-3-input"
                   name="mat-radio-group-0"
                   tabindex="0"

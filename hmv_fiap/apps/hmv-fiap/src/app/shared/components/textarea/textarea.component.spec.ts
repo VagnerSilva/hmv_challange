@@ -1,3 +1,4 @@
+import { HarnessLoader } from '@angular/cdk/testing'
 import { Component } from '@angular/core'
 import { AbstractControl, FormBuilder, FormGroup, NgForm } from '@angular/forms'
 import { byPlaceholder, createHostFactory, SpectatorHost } from '@ngneat/spectator/jest'
@@ -53,6 +54,7 @@ class CustomHostComponent {
 
 describe('TextareaComponent', () => {
 	let host: SpectatorHost<TextareaComponent, CustomHostComponent>
+	let loader: HarnessLoader
 	const createHost = createHostFactory({
 		component: TextareaComponent,
 		host: CustomHostComponent,
@@ -62,6 +64,7 @@ describe('TextareaComponent', () => {
 
 	it('Should create component', () => {
 		host = createHost(cases.simples)
+		host.detectChanges()
 		const form: AbstractControl = host.hostComponent.formExample.get('text') as AbstractControl
 		expect(form.value).toEqual(cases.text)
 		expect(host).toBeTruthy()
@@ -75,9 +78,10 @@ describe('TextareaComponent', () => {
 		expect(textarea.value).toEqual(cases.text)
 	})
 
-	it('Display placeholder and label', () => {
+	it('Display placeholder and label', async () => {
 		host = createHost(cases.labelName)
-		const textarea = host.query(byPlaceholder(`test`)) as HTMLTextAreaElement
+		host.detectChanges()
+		const textarea = host.query(byPlaceholder('test')) as HTMLTextAreaElement
 		expect(textarea.value).toEqual(cases.text)
 		expect(textarea.placeholder).toBeTruthy()
 		expect(host.element.innerHTML).toContain(`label`)
@@ -85,7 +89,8 @@ describe('TextareaComponent', () => {
 
 	it('should change rows', () => {
 		host = createHost(cases.rows)
-		const textarea = host.query(byPlaceholder(`test`)) as HTMLTextAreaElement
+		host.detectChanges()
+		const textarea = host.query(byPlaceholder('test')) as HTMLTextAreaElement
 		expect(textarea.value).toEqual(cases.text)
 		expect(textarea.placeholder).toBeTruthy()
 		expect(host.element.innerHTML).toContain(`label`)
